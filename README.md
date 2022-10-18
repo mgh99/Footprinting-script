@@ -10,5 +10,3 @@ Footpring es una técnica utilizada para recopilar información sobre los sistem
 - Sistema operativo utilizado
 - Números de teléfono
 
---------------------------------------------------------
-### EJEMPLO PARA GOOGLE
