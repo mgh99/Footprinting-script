@@ -7,15 +7,11 @@ response = requests.get('https://www.bodasorganizadas.es')
 
 # Obtenemos la información del encabezado HTTP de la respuesta
 header_info = response.headers
-
-# Mostramos la información del encabezado HTTP
-print(header_info)
+print(header_info) 
 
 # Analizamos el contenido HTML de la respuesta
 soup = BeautifulSoup(response.content, 'html.parser')
-
-# Obtenemos el título de la página
-title = soup.title.string
+title = soup.title.string 
 print(title)
 
 # Obtenemos las etiquetas meta de la página
@@ -30,8 +26,6 @@ for link in links:
 
 # Realizamos una consulta DNS para obtener el servidor de nombres de la página
 answers = dns.resolver.query('bodasorganizadas.es', 'NS')
-
-# Mostramos la información del servidor de nombres
 for rdata in answers:
     print(rdata)
 
@@ -40,9 +34,7 @@ response = requests.get(
     'https://api.shodan.io/shodan/host/search',
     params={
         'query': 'hostname:bodasorganizadas.es',
-        'key': 'TU_API_KEY'
-    }
-)
+        'key': 'TU_API_KEY' })
 
 # Obtenemos la información del escaneo de puertos del resultado de la petición
 scan_info = response.json()
