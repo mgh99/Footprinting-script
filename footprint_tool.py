@@ -48,7 +48,7 @@ print("2. Direccion IP: " +get_ip_address(url2))
 # 3. Registros Whois: # FUNCIONA
 def get_whois_info (domain):
     
-    api_key = 'at_QnMUAXz2MOljPmDJyhc1pbrjrQylE'
+    api_key = 'clave_API'
     url = f'https://www.whoisxmlapi.com/whoisserver/WhoisService?apiKey={api_key}&domainName={domain}&outputFormat=JSON'
     try:
         r = requests.get(url)
